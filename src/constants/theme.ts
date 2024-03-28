@@ -10,4 +10,13 @@ export const theme = createTheme({
     secondary: '#f0c419',
   },
   mode: 'dark',
+  components: {
+    Button: {
+      buttonStyle: {
+        borderRadius: 10,
+        paddingHorizontal: 20,
+        paddingVertical: 20,
+      },
+    },
+  },
 })
