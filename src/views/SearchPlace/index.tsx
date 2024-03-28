@@ -4,8 +4,15 @@ import { PlaceTypeStep } from './components/steps/PlaceTypeStep'
 import { RangeLocalStep } from './components/steps/RangeLocalStep'
 import { SpecialityPlaceStep } from './components/steps/SpecialityPlaceStep'
 import { NavigationContainer } from '@react-navigation/native'
+import { StackScreenProps } from '@react-navigation/stack'
 
-const Stack = createStackNavigator()
+export type RootStackParamList = {
+  RangeLocalStep: { range: number }
+  PlaceTypeStep: { type: string }
+  SpecialityPlaceStep: { speciality?: string } | undefined
+}
+
+const Stack = createStackNavigator<RootStackParamList>()
 
 export const SearchPlaceView = () => {
   return (
