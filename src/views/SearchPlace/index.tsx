@@ -18,7 +18,9 @@ export const SearchPlaceView = () => {
   return (
     <Stack.Navigator
       initialRouteName='RangeLocalStep'
-      screenOptions={{ headerShown: false }}
+      screenOptions={{
+        headerShown: true,
+      }}
     >
       <Stack.Screen
         name='RangeLocalStep'
