@@ -1216,6 +1216,11 @@
   dependencies:
     "@types/hammerjs" "^2.0.36"
 
+"@expo-google-fonts/kumbh-sans@^0.2.3":
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/@expo-google-fonts/kumbh-sans/-/kumbh-sans-0.2.3.tgz#2f4530e2236b8a9db0fc789ba4ae1022733eb1b8"
+  integrity sha512-TAUisGf6Ke4pYi9ENH+5nIFCv35WAxfxIA67odvn+bvtaNEOXNlBNI+J/Z17mhNKbBG3dRJsqPaZlUl64bCowg==
+
 "@expo/bunyan@^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@expo/bunyan/-/bunyan-4.0.0.tgz#be0c1de943c7987a9fbd309ea0b1acd605890c7b"

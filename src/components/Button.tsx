@@ -15,10 +15,14 @@ const Button = ({ children, variant, ...props }: Props) => {
       },
       titleStyle: {
         color: '#333',
+        fontFamily: 'KumbhSans_500Medium',
       },
     },
     selected: {
       color: 'secondary',
+      titleStyle: {
+        fontFamily: 'KumbhSans_500Medium',
+      },
     },
   }
 

@@ -7,8 +7,18 @@ const TitleHeader = () => {
       className='items-center'
       style={{ gap: 3 }}
     >
-      <Text className='text-3xl font-bold'>O que você busca?</Text>
-      <Text className='text-lg'>Selecione 1 opção</Text>
+      <Text
+        className='text-3xl'
+        style={{ fontFamily: 'KumbhSans_800ExtraBold' }}
+      >
+        O que você busca?
+      </Text>
+      <Text
+        className='text-lg'
+        style={{ fontFamily: 'KumbhSans_500Medium' }}
+      >
+        Selecione 1 opção
+      </Text>
     </View>
   )
 }

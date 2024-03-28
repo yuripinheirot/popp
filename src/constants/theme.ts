@@ -20,7 +20,6 @@ export const theme = createTheme({
         paddingHorizontal: 20,
         paddingVertical: 20,
       },
-      uppercase: true,
     },
   },
 })

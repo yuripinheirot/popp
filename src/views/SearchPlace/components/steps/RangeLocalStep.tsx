@@ -56,7 +56,10 @@ export const RangeLocalStep = ({ navigation, route }: Props) => {
         className='p-6 items-center bg-gray-100 rounded-2xl'
         style={{ gap: 22 }}
       >
-        <Text className='text-xl font-normal text-center'>
+        <Text
+          className='text-xl text-center'
+          style={{ fontFamily: 'KumbhSans_400Regular' }}
+        >
           Você pensa em ir à algum lugar à qual distância?
         </Text>
 
