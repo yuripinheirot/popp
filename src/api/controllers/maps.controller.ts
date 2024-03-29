@@ -4,7 +4,7 @@ import { SearchNearbyPlacesQueryType } from '../protocols/searchNearbyPlacesQuer
 
 export const mapsController = {
   searchNearbyPlaces: async (query: SearchNearbyPlacesQueryType) => {
-    const { data } = await http.get<PlacesNearbyResponse>(
+    const { data } = await http.get<PlacesNearbyResponse['data']>(
       '/maps/search/nearby',
       { params: query }
     )
