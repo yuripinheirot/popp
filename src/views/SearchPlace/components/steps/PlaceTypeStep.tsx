@@ -12,6 +12,7 @@ import Prato from '../../../../../assets/prato.svg'
 import Cofee from '../../../../../assets/coffee.svg'
 import Parque from '../../../../../assets/parque-infantil.svg'
 import Supermarket from '../../../../../assets/supermarket.svg'
+import TitleHeader from '../TitleHeader'
 
 type Props = StackScreenProps<RootStackParamList, 'PlaceTypeStep'>
 
@@ -89,6 +90,7 @@ export const PlaceTypeStep = ({ navigation, route }: Props) => {
 
   return (
     <LayoutWrapper>
+      <TitleHeader />
       <CardOptions title='Qual categoria de lugar você procura?'>
         {optionsButtons}
       </CardOptions>
