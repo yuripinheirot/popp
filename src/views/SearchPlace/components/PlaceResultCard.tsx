@@ -14,10 +14,7 @@ export const PlaceResultCard = ({
   name
 }: Props) => {
   return (
-    <View
-      className="flex-row  bg-gray-200 p-2 rounded-lg"
-      style={{ gap: 10, flexGrow: 1, flexShrink: 1 }}
-    >
+    <View className="flex-row  bg-gray-200 p-2 rounded-lg" style={{ gap: 10 }}>
       <View className="w-[140px]">
         <Image
           source={{
