@@ -3,6 +3,7 @@ import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { googleController } from '../../../api/controllers/google.controller'
 import { PlaceResultCardSkeleton } from './PlaceResultCardSkeleton'
+import { GOOGLE_API_KEY } from '@env'
 
 type Props = {
   name: string
@@ -22,7 +23,7 @@ export const PlaceResultCard = ({
       <View className='w-[140px]'>
         <Image
           source={{
-            uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${imageReference}&key=AIzaSyBefyTTZjo6Rmfqul_rGi1QLbtyQmykiNY`,
+            uri: `https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photo_reference=${imageReference}&key=${GOOGLE_API_KEY}`,
           }}
           style={{ width: '100%', height: 90, borderRadius: 4 }}
         />
