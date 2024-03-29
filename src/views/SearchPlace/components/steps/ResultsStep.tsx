@@ -8,7 +8,7 @@ import { RootStackParamList } from '../..'
 import { initialLocation } from '../../../../constants/initialLocation'
 import { useQuery } from '@tanstack/react-query'
 import { mapsController } from '../../../../api/controllers/maps.controller'
-import PlaceResultCard from '../PlaceResultCard'
+import { PlaceResultCard } from '../PlaceResultCard'
 
 type Props = StackScreenProps<RootStackParamList, 'ResultsStep'>
 

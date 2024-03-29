@@ -8,7 +8,11 @@ type Props = {
   description: string
   imageReference: string
 }
-const PlaceResultCard = ({ description, imageReference, name }: Props) => {
+export const PlaceResultCard = ({
+  description,
+  imageReference,
+  name,
+}: Props) => {
   return (
     <View
       className='flex-row  bg-gray-200 p-2 rounded-lg'
@@ -41,5 +45,3 @@ const PlaceResultCard = ({ description, imageReference, name }: Props) => {
     </View>
   )
 }
-
-export default PlaceResultCard
