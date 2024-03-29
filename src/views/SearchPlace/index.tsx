@@ -1,16 +1,17 @@
 import { createStackNavigator } from '@react-navigation/stack'
-import { Text, View } from 'react-native'
 import { PlaceTypeStep } from './components/steps/PlaceTypeStep'
 import { RangeLocalStep } from './components/steps/RangeLocalStep'
 import { SpecialityPlaceStep } from './components/steps/SpecialityPlaceStep'
-import { NavigationContainer } from '@react-navigation/native'
-import { StackScreenProps } from '@react-navigation/stack'
 import { KeyValue } from '../../protocols/key-value.type'
+import { ResultsStep } from './components/steps/ResultsStep'
 
 export type RootStackParamList = {
-  RangeLocalStep: { range: number }
-  PlaceTypeStep: { type: string }
-  SpecialityPlaceStep: { speciality?: KeyValue[] } | undefined
+  RangeLocalStep: undefined
+  PlaceTypeStep: { range: number } | undefined
+  SpecialityPlaceStep:
+    | { range: number; type: string; specialities: KeyValue[] }
+    | undefined
+  ResultsStep: { range: number; type: string; keyword?: string }
 }
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -34,6 +35,10 @@ export const SearchPlaceView = () => {
       <Stack.Screen
         name='SpecialityPlaceStep'
         component={SpecialityPlaceStep}
+      />
+      <Stack.Screen
+        name='ResultsStep'
+        component={ResultsStep}
       />
     </Stack.Navigator>
   )

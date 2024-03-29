@@ -39,11 +39,16 @@ const options: KeyValue[] = [
 ]
 
 export const RangeLocalStep = ({ navigation, route }: Props) => {
+  const onSelectRange = (range: number) => {
+    navigation.push('PlaceTypeStep', { range })
+  }
+
   const ButtonOptions = options.map((option) => (
     <Button
       variant='unselected'
       key={option.key}
       containerStyle={{ width: '30%' }}
+      onPress={() => onSelectRange(option.key as number)}
     >
       {option.value}
     </Button>

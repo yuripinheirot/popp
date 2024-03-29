@@ -16,29 +16,66 @@ import Supermarket from '../../../../../assets/supermarket.svg'
 
 type Props = StackScreenProps<RootStackParamList, 'PlaceTypeStep'>
 
-const options: Array<KeyValue & { SvgIcon: any }> = [
+const options: Array<KeyValue & { SvgIcon: any; specialities?: KeyValue[] }> = [
   {
     key: 'night_club',
     value: 'Baladas',
     SvgIcon: Vinil,
+    specialities: [
+      { key: 'Pop', value: 'Pop' },
+      { key: 'Eletrônica', value: 'Eletrônica' },
+      { key: 'Rap / Hip-Hop', value: 'Rap / Hip-Hop' },
+      { key: 'Reggae', value: 'Reggae' },
+      { key: 'Samba', value: 'Samba' },
+      { key: 'Funk / Reggaeton', value: 'Funk / Reggaeton' },
+      { key: 'Pagode', value: 'Pagode' },
+      { key: 'Sertanejo', value: 'Sertanejo' },
+    ],
   },
   { key: 'bar', value: 'Bares', SvgIcon: TicketMusic },
   {
     key: 'restaurant',
     value: 'Restaurantes',
     SvgIcon: Prato,
+    specialities: [
+      { key: 'japonese', value: 'Japonês' },
+      { key: 'árabe', value: 'Árabe' },
+      { key: 'brasileira', value: 'Brasileira' },
+      { key: 'americana', value: 'Americana' },
+      { key: 'alemã', value: 'Alemã' },
+      { key: 'Mexicana', value: 'Mexicana' },
+      { key: 'Tailandesa', value: 'Tailandesa' },
+      { key: 'Italiana', value: 'Italiana' },
+    ],
   },
   { key: 'cafe', value: 'Cafés', SvgIcon: Cofee },
   { key: 'park', value: 'Parque', SvgIcon: Parque },
   { key: 'supermarket', value: 'Supermercados', SvgIcon: Supermarket },
 ]
 
-export const PlaceTypeStep = ({ navigation }: Props) => {
+export const PlaceTypeStep = ({ navigation, route }: Props) => {
+  const onSelectType = (type: string) => {
+    const hasSpecialities = options.find(
+      (option) => option.key === type
+    )?.specialities
+
+    if (hasSpecialities) {
+      return navigation.push('SpecialityPlaceStep', {
+        range: route.params!.range,
+        type,
+        specialities: hasSpecialities,
+      })
+    }
+
+    navigation.push('ResultsStep', { range: route.params!.range, type })
+  }
+
   const optionsButtons = options.map(({ SvgIcon, key, value }) => (
     <Button
       variant='unselected'
       key={key}
       containerStyle={{ flexGrow: 1 }}
+      onPress={() => onSelectType(key as string)}
     >
       <View className='justify-center items-center gap-2'>
         <SvgIcon
