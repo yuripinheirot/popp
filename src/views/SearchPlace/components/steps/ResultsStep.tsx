@@ -9,6 +9,7 @@ import { initialLocation } from '../../../../constants/initialLocation'
 import { useQuery } from '@tanstack/react-query'
 import { mapsController } from '../../../../api/controllers/maps.controller'
 import { PlaceResultCard } from '../PlaceResultCard'
+import { PlaceResultCardSkeleton } from '../PlaceResultCardSkeleton'
 
 type Props = StackScreenProps<RootStackParamList, 'ResultsStep'>
 
@@ -34,14 +35,18 @@ export const ResultsStep = ({ route }: Props) => {
     />
   ))
 
+  const renderSkeletons = Array.from({ length: 7 }).map((_, index) => (
+    <PlaceResultCardSkeleton key={index} />
+  ))
+
   return (
     <ScrollView>
-      <View>
+      <View className='flex-1'>
         <View
           className='p-4 bg-white'
           style={{ gap: 20 }}
         >
-          {renderResults}
+          {isLoading ? renderSkeletons : renderResults}
         </View>
       </View>
     </ScrollView>

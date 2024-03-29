@@ -2,6 +2,7 @@ import { View, Image, Text } from 'react-native'
 import React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { googleController } from '../../../api/controllers/google.controller'
+import { PlaceResultCardSkeleton } from './PlaceResultCardSkeleton'
 
 type Props = {
   name: string
