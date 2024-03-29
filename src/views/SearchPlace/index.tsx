@@ -5,11 +5,12 @@ import { RangeLocalStep } from './components/steps/RangeLocalStep'
 import { SpecialityPlaceStep } from './components/steps/SpecialityPlaceStep'
 import { NavigationContainer } from '@react-navigation/native'
 import { StackScreenProps } from '@react-navigation/stack'
+import { KeyValue } from '../../protocols/key-value.type'
 
 export type RootStackParamList = {
   RangeLocalStep: { range: number }
   PlaceTypeStep: { type: string }
-  SpecialityPlaceStep: { speciality?: string } | undefined
+  SpecialityPlaceStep: { speciality?: KeyValue[] } | undefined
 }
 
 const Stack = createStackNavigator<RootStackParamList>()
@@ -17,7 +18,7 @@ const Stack = createStackNavigator<RootStackParamList>()
 export const SearchPlaceView = () => {
   return (
     <Stack.Navigator
-      initialRouteName='PlaceTypeStep'
+      initialRouteName='RangeLocalStep'
       screenOptions={{
         headerShown: true,
       }}
