@@ -6,6 +6,8 @@ import { Card } from '@rneui/themed'
 import TitleHeader from '../TitleHeader'
 import { KeyValue } from '../../../../protocols/key-value.type'
 import Button from '../../../../components/Button'
+import CardOptions from '../../../../components/CardOptions'
+import { LayoutWrapper } from '../../../../components/LayoutWrapper'
 
 type Props = StackScreenProps<RootStackParamList, 'RangeLocalStep'>
 
@@ -47,29 +49,11 @@ export const RangeLocalStep = ({ navigation, route }: Props) => {
     </Button>
   ))
   return (
-    <View
-      className='flex-1 items-center bg-white px-6'
-      style={{ gap: 30 }}
-    >
+    <LayoutWrapper>
       <TitleHeader />
-      <View
-        className='p-6 items-center bg-gray-100 rounded-2xl'
-        style={{ gap: 22 }}
-      >
-        <Text
-          className='text-xl text-center'
-          style={{ fontFamily: 'KumbhSans_400Regular' }}
-        >
-          Você pensa em ir à algum lugar à qual distância?
-        </Text>
-
-        <View
-          className='flex flex-row flex-wrap items-center justify-center'
-          style={{ gap: 6 }}
-        >
-          {ButtonOptions}
-        </View>
-      </View>
-    </View>
+      <CardOptions title='Você pensa em ir à algum lugar à qual distância?'>
+        {ButtonOptions}
+      </CardOptions>
+    </LayoutWrapper>
   )
 }

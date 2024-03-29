@@ -17,7 +17,7 @@ const Stack = createStackNavigator<RootStackParamList>()
 export const SearchPlaceView = () => {
   return (
     <Stack.Navigator
-      initialRouteName='RangeLocalStep'
+      initialRouteName='PlaceTypeStep'
       screenOptions={{
         headerShown: true,
       }}
