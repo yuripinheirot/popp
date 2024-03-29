@@ -26,16 +26,18 @@ export const PlaceResultCard = ({
           style={{ width: '100%', height: 90, borderRadius: 4 }}
         />
       </View>
-      <View style={{}}>
+      <View
+        className='flex-1'
+        style={{ gap: 6 }}
+      >
         <Text
           numberOfLines={1}
           ellipsizeMode='tail'
-          className='text-lg font-bold'
+          className='text-lg font-bold '
         >
           {name}
         </Text>
         <Text
-          style={{ fontSize: 18, flexShrink: 1, flexWrap: 'wrap' }}
           numberOfLines={3}
           ellipsizeMode='tail'
         >
