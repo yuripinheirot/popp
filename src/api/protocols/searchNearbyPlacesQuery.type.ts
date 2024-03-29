@@ -3,5 +3,5 @@ export type SearchNearbyPlacesQueryType = {
   lng: number
   radius: number
   type: string
-  keyword: string
+  keyword?: string
 }
