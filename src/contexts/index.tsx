@@ -1,11 +1,12 @@
-import { ThemeProvider } from '@rneui/themed'
-import { PropsWithChildren } from 'react'
-import { theme } from '../constants/theme'
-import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { ThemeProvider } from '@rneui/themed';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { PropsWithChildren } from 'react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
+
+import { theme } from '../constants/theme';
 
 export const Contexts = ({ children }: PropsWithChildren) => {
-  const queryClient = new QueryClient()
+  const queryClient = new QueryClient();
 
   return (
     <SafeAreaProvider>
@@ -15,5 +16,5 @@ export const Contexts = ({ children }: PropsWithChildren) => {
         </QueryClientProvider>
       </ThemeProvider>
     </SafeAreaProvider>
-  )
-}
+  );
+};

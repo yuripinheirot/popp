@@ -1,4 +1,4 @@
-import { KeyValue } from './key-value.type'
+import { KeyValue } from './key-value.type';
 
 export const PlacesTypes: KeyValue[] = [
   { key: 'accounting', value: 'contabilidade' },
@@ -96,5 +96,5 @@ export const PlacesTypes: KeyValue[] = [
   { key: 'travel_agency', value: 'agência de viagens' },
   { key: 'university', value: 'universidade' },
   { key: 'veterinary_care', value: 'cuidado veterinário' },
-  { key: 'zoo', value: 'zoológico' },
-]
+  { key: 'zoo', value: 'zoológico' }
+];

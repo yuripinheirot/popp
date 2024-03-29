@@ -1,7 +1,7 @@
 export type SearchNearbyPlacesQueryType = {
-  lat: number
-  lng: number
-  radius: number
-  type: string
-  keyword?: string
-}
+  lat: number;
+  lng: number;
+  radius: number;
+  type: string;
+  keyword?: string;
+};
