@@ -1,9 +1,4 @@
-import 'react-native-gesture-handler'
-import { StatusBar } from 'expo-status-bar'
-import { Contexts } from './src/contexts'
-import { NavigationContainer } from '@react-navigation/native'
-import { Main } from './src/Main'
-import { Text } from 'react-native'
+import 'react-native-gesture-handler';
 import {
   useFonts,
   KumbhSans_100Thin,
@@ -14,8 +9,13 @@ import {
   KumbhSans_600SemiBold,
   KumbhSans_700Bold,
   KumbhSans_800ExtraBold,
-  KumbhSans_900Black,
-} from '@expo-google-fonts/kumbh-sans'
+  KumbhSans_900Black
+} from '@expo-google-fonts/kumbh-sans';
+import { NavigationContainer } from '@react-navigation/native';
+import { StatusBar } from 'expo-status-bar';
+
+import { Contexts } from './src/contexts';
+import { Main } from './src/Main';
 
 export default function App() {
   useFonts({
@@ -27,8 +27,8 @@ export default function App() {
     KumbhSans_600SemiBold,
     KumbhSans_700Bold,
     KumbhSans_800ExtraBold,
-    KumbhSans_900Black,
-  })
+    KumbhSans_900Black
+  });
 
   return (
     <Contexts>
@@ -37,5 +37,5 @@ export default function App() {
         <Main />
       </NavigationContainer>
     </Contexts>
-  )
+  );
 }
